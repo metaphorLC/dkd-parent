@@ -4,6 +4,7 @@ import java.util.List;
 import com.dkd.common.utils.DateUtils;
 import com.dkd.common.utils.SecurityUtils;
 import com.dkd.manage.domain.vo.PartnerVo;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dkd.manage.mapper.PartnerMapper;
@@ -19,7 +20,7 @@ import com.dkd.manage.service.IPartnerService;
 @Service
 public class PartnerServiceImpl implements IPartnerService 
 {
-    @Autowired
+    @Mapper
     private PartnerMapper partnerMapper;
 
     /**

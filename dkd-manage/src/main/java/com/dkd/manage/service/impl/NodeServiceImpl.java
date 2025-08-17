@@ -1,7 +1,10 @@
 package com.dkd.manage.service.impl;
 
+import java.util.Collections;
 import java.util.List;
 import com.dkd.common.utils.DateUtils;
+import com.dkd.manage.domain.vo.NodeVo;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dkd.manage.mapper.NodeMapper;
@@ -17,7 +20,7 @@ import com.dkd.manage.service.INodeService;
 @Service
 public class NodeServiceImpl implements INodeService 
 {
-    @Autowired
+    @Mapper
     private NodeMapper nodeMapper;
 
     /**
@@ -92,5 +95,15 @@ public class NodeServiceImpl implements INodeService
     public int deleteNodeById(Long id)
     {
         return nodeMapper.deleteNodeById(id);
+    }
+
+    /**
+     * 查询点位管理列表
+     * @param node
+     * @return NodeVo
+     */
+    @Override
+    public List<NodeVo> selectNodeVoList(Node node) {
+        return nodeMapper.selectNodeVoList(node);
     }
 }

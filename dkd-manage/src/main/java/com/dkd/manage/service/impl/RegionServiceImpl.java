@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import com.dkd.common.utils.DateUtils;
 import com.dkd.manage.domain.vo.RegionVo;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dkd.manage.mapper.RegionMapper;
@@ -19,7 +20,7 @@ import com.dkd.manage.service.IRegionService;
 @Service
 public class RegionServiceImpl implements IRegionService 
 {
-    @Autowired
+    @Mapper
     private RegionMapper regionMapper;
 
     /**
