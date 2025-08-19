@@ -20,7 +20,7 @@ import com.dkd.manage.service.IPartnerService;
 @Service
 public class PartnerServiceImpl implements IPartnerService 
 {
-    @Mapper
+    @Autowired
     private PartnerMapper partnerMapper;
 
     /**

@@ -20,7 +20,7 @@ import com.dkd.manage.service.IRegionService;
 @Service
 public class RegionServiceImpl implements IRegionService 
 {
-    @Mapper
+    @Autowired
     private RegionMapper regionMapper;
 
     /**

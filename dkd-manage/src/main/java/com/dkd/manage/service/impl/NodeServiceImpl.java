@@ -20,7 +20,7 @@ import com.dkd.manage.service.INodeService;
 @Service
 public class NodeServiceImpl implements INodeService 
 {
-    @Mapper
+    @Autowired
     private NodeMapper nodeMapper;
 
     /**
